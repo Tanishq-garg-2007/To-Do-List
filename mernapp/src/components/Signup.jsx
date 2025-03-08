@@ -10,7 +10,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/createuser", { // Ensure the URL is correct
+      const response = await fetch("https://to-do-list-wuoo.onrender.com/api/createuser", { // Ensure the URL is correct
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
