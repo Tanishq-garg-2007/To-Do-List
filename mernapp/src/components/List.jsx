@@ -14,7 +14,7 @@ const List = () => {
     if (taskTitle && taskDescription) {
         let newTask = { title: taskTitle, description: taskDescription };
 
-        let response = await fetch("http://localhost:5000/api/listdata", {
+        let response = await fetch("https://to-do-list-wuoo.onrender.com/api/listdata", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -42,7 +42,7 @@ const List = () => {
 
   const fetchMyList = async () => {
     try {
-        const res = await fetch("http://localhost:5000/api/mylistdata", {
+        const res = await fetch("https://to-do-list-wuoo.onrender.com/api/mylistdata", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: localStorage.getItem("UserEmail") })
@@ -73,7 +73,7 @@ const List = () => {
 const deleteTask = async (taskIndex) => {
   let userEmail = localStorage.getItem("UserEmail");
 
-  const deleteUrl = `http://localhost:5000/api/deletetask?email=${userEmail}&index=${taskIndex}`;
+  const deleteUrl = `https://to-do-list-wuoo.onrender.com/api/deletetask?email=${userEmail}&index=${taskIndex}`;
   console.log("Sending DELETE request to:", deleteUrl); // ✅ Debugging Step
 
   try {
