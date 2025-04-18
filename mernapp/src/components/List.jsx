@@ -122,7 +122,8 @@ const deleteTask = async (taskIndex) => {
   {listData && listData.length > 0 ? (
     listData
       .slice(0) // Clone the array to prevent modifying the original
-      .reverse() // Show latest data first
+      
+      // Show latest data first
       .map((innerArray, index) =>
         Array.isArray(innerArray) && innerArray.length > 1 ? ( // Ensure it's an array and has at least two objects
           <Todocard
