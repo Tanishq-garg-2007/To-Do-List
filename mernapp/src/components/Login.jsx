@@ -10,7 +10,7 @@ const Login = () => {
       e.preventDefault();
   
       try {
-        const response = await fetch("https://to-do-list-wuoo.onrender.com/api/loginuser", { // Ensure the URL is correct
+        const response = await fetch("https://to-do-list-wuoo.onrender.com/api/loginuser", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -69,3 +69,4 @@ const Login = () => {
 }
 
 export default Login
+
